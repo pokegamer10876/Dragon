@@ -4,16 +4,28 @@ window.addEventListener("mousemove",()=>{
 })
 var cardsFlipped = 0;
 var previousCardId = "";
+var Score = 0;
+var HighScore = window.localStorage.getItem("localHigh");
+document.getElementById("score").innerHTML="Score: "+Score;
+document.getElementById("highScore").innerHTML="High Score: "+HighScore;
+
+function load(){
+   document.getElementById("score").innerHTML="Score: "+Score;
+   document.getElementById("highScore").innerHTML="High Score: "+ window.localStorage.getItem("localHigh");
+}
+
+Window.onload = load();
+
 function card1Clicked(){
-    cardsFlipped++
- if(cardsFlipped>2){
+    
+ if(cardsFlipped>=2){
     return;
  }
  if (document.getElementById("card1").src==="dragon1.jfif"){
     return;
  }
 
-
+ cardsFlipped++;
  document.getElementById("card1").src = "dragon1.jfif";
  if(cardsFlipped ===1){
   previousCardId = "card1";
@@ -23,25 +35,33 @@ function card1Clicked(){
     if(document.getElementById("card1").src === document.getElementById(previousCardId).src){
         cardsFlipped=0;
         previousCardId="";
+        Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
     } else {
+      setTimeout(function(){
         document.getElementById("card1").src = "matching_notClicked.jfif";
         document.getElementById(previousCardId).src = "matching_notClicked.jfif";
         cardsFlipped=0;
         previousCardId="";
+      },1000);
     }
  }
 }
 function card2Clicked(){
-    cardsFlipped++
-    if(cardsFlipped>2){
+    
+    if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card2").src==="dragon1.jfif"){
+    if (document.getElementById("card2").src==="dragon7.jfif"){
        return;
     }
    
-    
-    document.getElementById("card2").src = "dragon1.jfif";
+    cardsFlipped++;
+    document.getElementById("card2").src = "dragon7.jfif";
     if(cardsFlipped ===1){
      previousCardId = "card2";
     }
@@ -49,11 +69,19 @@ function card2Clicked(){
        if(document.getElementById("card2").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
+         setTimeout(function(){
            document.getElementById("card2").src = "matching_notClicked.jfif";
            document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
@@ -61,12 +89,12 @@ function card2Clicked(){
     if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card3").src==="dragon1.jfif"){
+    if (document.getElementById("card3").src==="dragon2.jfif"){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card3").src = "dragon1.png";
+    cardsFlipped++;
+    document.getElementById("card3").src = "dragon2.jfif";
     if(cardsFlipped ===1){
      previousCardId = "card3";
     }
@@ -74,11 +102,19 @@ function card2Clicked(){
        if(document.getElementById("card3").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
-           document.getElementById("card3").src === "matching_notClicked.jfif";
-           document.getElementById(previousCardId).src === "matching_notClicked.jfif";
+         setTimeout(function(){
+           document.getElementById("card3").src = "matching_notClicked.jfif";
+           document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
@@ -86,12 +122,12 @@ function card2Clicked(){
     if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card4").src==="dragon1.jfif"){
+    if (document.getElementById("card4").src==="dragon5.jfif"){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card4").src = "dragon1.png";
+    cardsFlipped++;
+    document.getElementById("card4").src = "dragon5.jfif";
     if(cardsFlipped ===1){
      previousCardId = "card4";
     }
@@ -99,11 +135,19 @@ function card2Clicked(){
        if(document.getElementById("card4").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
-           document.getElementById("card4").src === "matching_notClicked.jfif";
-           document.getElementById(previousCardId).src === "matching_notClicked.jfif";
+         setTimeout(function(){
+           document.getElementById("card4").src = "matching_notClicked.jfif";
+           document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
@@ -111,12 +155,12 @@ function card2Clicked(){
     if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card5").src==="dragon1.jfif"){
+    if (document.getElementById("card5").src==="dragon8.jfif"){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card5").src = "dragon1.png";
+    cardsFlipped++;
+    document.getElementById("card5").src = "dragon8.jfif";
     if(cardsFlipped ===1){
      previousCardId = "card5";
     }
@@ -124,11 +168,19 @@ function card2Clicked(){
        if(document.getElementById("card5").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
-           document.getElementById("card5").src === "matching_notClicked.jfif";
-           document.getElementById(previousCardId).src === "matching_notClicked.jfif";
+         setTimeout(function(){
+           document.getElementById("card5").src = "matching_notClicked.jfif";
+           document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
@@ -140,8 +192,8 @@ function card2Clicked(){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card6").src = "dragon1.png";
+    cardsFlipped++;
+    document.getElementById("card6").src = "dragon1.jfif";
     if(cardsFlipped ===1){
      previousCardId = "card6";
     }
@@ -149,11 +201,19 @@ function card2Clicked(){
        if(document.getElementById("card6").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
-           document.getElementById("card6").src === "matching_notClicked.jfif";
-           document.getElementById(previousCardId).src === "matching_notClicked.jfif";
+         setTimeout(function(){
+           document.getElementById("card6").src = "matching_notClicked.jfif";
+           document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
@@ -161,24 +221,33 @@ function card2Clicked(){
     if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card7").src==="dragon1.jfif"){
+    if (document.getElementById("card7").src==="dragon8.jfif"){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card7").src = "dragon1.png";
+    cardsFlipped++;
+    document.getElementById("card7").src = "dragon8.jfif";
     if(cardsFlipped ===1){
      previousCardId = "card7";
+     
     }
     if(cardsFlipped === 2){
        if(document.getElementById("card7").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
-           document.getElementById("card7").src === "matching_notClicked.jfif";
-           document.getElementById(previousCardId).src === "matching_notClicked.jfif";
+         setTimeout(function(){
+           document.getElementById("card7").src = "matching_notClicked.jfif";
+           document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
@@ -186,12 +255,12 @@ function card2Clicked(){
     if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card8").src==="dragon1.jfif"){
+    if (document.getElementById("card8").src==="dragon6.jfif"){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card8").src = "dragon1.png";
+    cardsFlipped++;
+    document.getElementById("card8").src = "dragon6.jfif";
     if(cardsFlipped ===1){
      previousCardId = "card8";
     }
@@ -199,11 +268,19 @@ function card2Clicked(){
        if(document.getElementById("card8").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
-           document.getElementById("card8").src === "matching_notClicked.jfif";
-           document.getElementById(previousCardId).src === "matching_notClicked.jfif";
+         setTimeout(function(){
+           document.getElementById("card8").src = "matching_notClicked.jfif";
+           document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
@@ -211,12 +288,12 @@ function card2Clicked(){
     if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card9").src==="dragon1.jfif"){
+    if (document.getElementById("card9").src==="dragon4.jfif"){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card9").src = "dragon1.png";
+    cardsFlipped++;
+    document.getElementById("card9").src = "dragon4.jfif";
     if(cardsFlipped ===1){
      previousCardId = "card9";
     }
@@ -224,11 +301,19 @@ function card2Clicked(){
        if(document.getElementById("card9").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
-           document.getElementById("card9").src === "matching_notClicked.jfif";
-           document.getElementById(previousCardId).src === "matching_notClicked.jfif";
+         setTimeout(function(){
+           document.getElementById("card9").src = "matching_notClicked.jfif";
+           document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
@@ -236,12 +321,12 @@ function card2Clicked(){
     if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card10").src==="dragon3.png"){
+    if (document.getElementById("card10").src==="dragon3.jpg"){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card10").src = "dragon3.png";
+    cardsFlipped++;
+    document.getElementById("card10").src = "dragon3.jpg";
     if(cardsFlipped ===1){
      previousCardId = "card10";
     }
@@ -249,24 +334,32 @@ function card2Clicked(){
        if(document.getElementById("card10").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
-           document.getElementById("card10").src === "matching_notClicked.jfif";
-           document.getElementById(previousCardId).src === "matching_notClicked.jfif";
+         setTimeout(function(){
+           document.getElementById("card10").src = "matching_notClicked.jfif";
+           document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
    function card11Clicked(){
-    if(cardsFlipped>2){
+    if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card11").src==="dragon1.jfif"){
+    if (document.getElementById("card11").src==="dragon6.jfif"){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card11").src = "dragon1.jfif";
+    cardsFlipped++;
+    document.getElementById("card11").src = "dragon6.jfif";
     if(cardsFlipped ===1){
      previousCardId = "card11";
     }
@@ -274,24 +367,32 @@ function card2Clicked(){
        if(document.getElementById("card11").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
+         setTimeout(function(){
            document.getElementById("card11").src ="matching_notClicked.jfif";
            document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
    function card12Clicked(){
-    if(cardsFlipped>2){
+    if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card12").src==="dragon1.jfif"){
+    if (document.getElementById("card12").src==="dragon5.jfif"){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card12").src = "dragon1.jfif";
+    cardsFlipped++;
+    document.getElementById("card12").src = "dragon5.jfif";
     if(cardsFlipped ===1){
      previousCardId = "card12";
     }
@@ -299,24 +400,32 @@ function card2Clicked(){
        if(document.getElementById("card12").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
+         setTimeout(function(){
            document.getElementById("card12").src = "matching_notClicked.jfif";
            document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
    function card13Clicked(){
-    if(cardsFlipped>2){
+    if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card13").src==="dragon1.jfif"){
+    if (document.getElementById("card13").src==="dragon4.jfif"){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card13").src = "dragon1.jfif";
+    cardsFlipped++;
+    document.getElementById("card13").src = "dragon4.jfif";
     if(cardsFlipped ===1){
      previousCardId = "card13";
     }
@@ -324,24 +433,32 @@ function card2Clicked(){
        if(document.getElementById("card13").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
+         setTimeout(function(){
            document.getElementById("card13").src = "matching_notClicked.jfif";
            document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
    function card14Clicked(){
-    if(cardsFlipped>2){
+    if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card14").src==="dragon1.jfif"){
+    if (document.getElementById("card14").src==="dragon2.jfif"){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card14").src = "dragon1.jfif";
+    cardsFlipped++;
+    document.getElementById("card14").src = "dragon2.jfif";
     if(cardsFlipped ===1){
      previousCardId = "card14";
     }
@@ -349,24 +466,32 @@ function card2Clicked(){
        if(document.getElementById("card14").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
+         setTimeout(function(){
            document.getElementById("card14").src = "matching_notClicked.jfif";
            document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
    function card15Clicked(){
-    if(cardsFlipped>2){
+    if(cardsFlipped>=2){
        return;
     }
-    if (document.getElementById("card15").src==="dragon3.png"){
+    if (document.getElementById("card15").src==="dragon3.jpg"){
        return;
     }
    
-    cardsFlipped++
-    document.getElementById("card15").src = "dragon3.png";
+    cardsFlipped++;
+    document.getElementById("card15").src = "dragon3.jpg";
     if(cardsFlipped ===1){
      previousCardId = "card15";
     }
@@ -374,17 +499,25 @@ function card2Clicked(){
        if(document.getElementById("card15").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
-           document.getElementById("card15").src = "matching_notClicked.jfif";
+         setTimeout(function(){
+         document.getElementById("card15").src = "matching_notClicked.jfif";
            document.getElementById(previousCardId).src = "matching_notClicked.jfif";
            cardsFlipped=0;
            previousCardId="";
+         },1000);
        }
     }
    }
    function card16Clicked(){
-    cardsFlipped++
-    if(cardsFlipped>2){
+    cardsFlipped++;
+    if(cardsFlipped>=2){
        return;
     }
     if (document.getElementById("card16").src==="dragon7.jfif"){
@@ -400,6 +533,12 @@ function card2Clicked(){
        if(document.getElementById("card16").src === document.getElementById(previousCardId).src){
            cardsFlipped=0;
            previousCardId="";
+           Score = Score+100;
+        document.getElementById("score").innerHTML="Score:"+Score;
+        if (Score > HighScore){
+         HighScore = window.localStorage.setItem("localHigh",Score);
+         document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
+        }
        } else {
             setTimeout(function(){
 
