@@ -531,14 +531,14 @@ function card2Clicked(){
     }
    }
    function card16Clicked(){
-    cardsFlipped++;
+    
     if(cardsFlipped>=2){
        return;
     }
     if (document.getElementById("card16").src==="dragon7.jfif"){
        return;
     }
-   
+    cardsFlipped++;
     
     document.getElementById("card16").src = "dragon7.jfif";
     if(cardsFlipped ===1){
