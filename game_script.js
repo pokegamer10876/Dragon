@@ -38,7 +38,8 @@ function card1Clicked(){
         Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
     } else {
@@ -72,7 +73,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -105,7 +107,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -138,7 +141,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -171,7 +175,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -204,7 +209,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -238,7 +244,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -271,7 +278,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -304,7 +312,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -337,7 +346,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -370,7 +380,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -403,7 +414,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -436,7 +448,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -469,7 +482,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -502,7 +516,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
@@ -536,7 +551,8 @@ function card2Clicked(){
            Score = Score+100;
         document.getElementById("score").innerHTML="Score:"+Score;
         if (Score > HighScore){
-         HighScore = window.localStorage.setItem("localHigh",Score);
+         window.localStorage.setItem("localHigh",Score);
+         HighScore = window.localStorage.getItem("localHigh");
          document.getElementById("highScore").innerHTML = "High Score:"+window.localStorage.getItem("localHigh");
         }
        } else {
